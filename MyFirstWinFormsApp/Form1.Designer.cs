@@ -32,10 +32,12 @@ namespace MyFirstWinFormsApp
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.EmailId = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ConfirmPassword = new System.Windows.Forms.TextBox();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -67,33 +69,35 @@ namespace MyFirstWinFormsApp
             this.textBox2.Text = "Last name";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
+            // EmailId
+            // 
+            this.EmailId.Location = new System.Drawing.Point(94, 168);
+            this.EmailId.Name = "EmailId";
+            this.EmailId.Size = new System.Drawing.Size(580, 26);
+            this.EmailId.TabIndex = 3;
+            this.EmailId.Text = "Email ID";
+            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(94, 168);
+            this.textBox3.Location = new System.Drawing.Point(94, 220);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(580, 26);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "Email ID";
+            this.textBox3.TabIndex = 4;
+            this.textBox3.Text = "Password";
             // 
-            // textBox4
+            // ConfirmPassword
             // 
-            this.textBox4.Location = new System.Drawing.Point(94, 220);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(580, 26);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "Password";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(94, 272);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(580, 26);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Text = "Confirm Password";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.ConfirmPassword.Location = new System.Drawing.Point(94, 272);
+            this.ConfirmPassword.Name = "ConfirmPassword";
+            this.ConfirmPassword.Size = new System.Drawing.Size(580, 26);
+            this.ConfirmPassword.TabIndex = 5;
+            this.ConfirmPassword.Text = "Confirm Password";
+            this.ConfirmPassword.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // domainUpDown1
             // 
+            this.domainUpDown1.Items.Add("Male");
+            this.domainUpDown1.Items.Add("Female");
             this.domainUpDown1.Location = new System.Drawing.Point(94, 331);
             this.domainUpDown1.Name = "domainUpDown1";
             this.domainUpDown1.Size = new System.Drawing.Size(580, 26);
@@ -101,15 +105,39 @@ namespace MyFirstWinFormsApp
             this.domainUpDown1.Text = "Gender";
             this.domainUpDown1.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(503, 436);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 55);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(94, 399);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(252, 24);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "I agree to the Terms of Service";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 543);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.domainUpDown1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.ConfirmPassword);
             this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.EmailId);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -126,10 +154,12 @@ namespace MyFirstWinFormsApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox EmailId;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ConfirmPassword;
         private System.Windows.Forms.DomainUpDown domainUpDown1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
