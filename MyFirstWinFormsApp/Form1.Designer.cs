@@ -34,7 +34,7 @@ namespace MyFirstWinFormsApp
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.EmailId = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.ConfirmPassword = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -84,15 +84,16 @@ namespace MyFirstWinFormsApp
             this.textBox3.Size = new System.Drawing.Size(580, 26);
             this.textBox3.TabIndex = 4;
             this.textBox3.Text = "Password";
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
-            // ConfirmPassword
+            // textBox5
             // 
-            this.ConfirmPassword.Location = new System.Drawing.Point(94, 272);
-            this.ConfirmPassword.Name = "ConfirmPassword";
-            this.ConfirmPassword.Size = new System.Drawing.Size(580, 26);
-            this.ConfirmPassword.TabIndex = 5;
-            this.ConfirmPassword.Text = "Confirm Password";
-            this.ConfirmPassword.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox5.Location = new System.Drawing.Point(94, 272);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(580, 26);
+            this.textBox5.TabIndex = 5;
+            this.textBox5.Text = "Confirm Password";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // domainUpDown1
             // 
@@ -108,6 +109,7 @@ namespace MyFirstWinFormsApp
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(503, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 55);
@@ -135,7 +137,7 @@ namespace MyFirstWinFormsApp
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.domainUpDown1);
-            this.Controls.Add(this.ConfirmPassword);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.EmailId);
             this.Controls.Add(this.textBox2);
@@ -156,7 +158,7 @@ namespace MyFirstWinFormsApp
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox EmailId;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox ConfirmPassword;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,19 +53,55 @@
     <Compile Include="Calculator.Designer.cs">
       <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContactInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactInfo.Designer.cs">
+      <DependentUpon>ContactInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Country.Designer.cs">
+      <DependentUpon>Country.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GrammarCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrammarCheck.Designer.cs">
+      <DependentUpon>GrammarCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuTypes.Designer.cs">
+      <DependentUpon>MenuTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Calculator.resx">
       <DependentUpon>Calculator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ContactInfo.resx">
+      <DependentUpon>ContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Country.resx">
+      <DependentUpon>Country.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrammarCheck.resx">
+      <DependentUpon>GrammarCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTypes.resx">
+      <DependentUpon>MenuTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +125,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid-girl-icon %286%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

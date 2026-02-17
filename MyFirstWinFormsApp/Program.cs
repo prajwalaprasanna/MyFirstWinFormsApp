@@ -16,7 +16,14 @@ namespace MyFirstWinFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calculator());
+
+
+            //Application.Run(new Form1());
+            //Application.Run(new Calculator
+            //Application.Run(new Country());
+            //Application.Run(new GrammarCheck());
+            //Application.Run(new MenuTypes());
+            Application.Run(new ContactInfo());
         }
     }
 }

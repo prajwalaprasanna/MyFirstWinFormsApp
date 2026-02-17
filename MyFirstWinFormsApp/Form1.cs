@@ -52,14 +52,34 @@ namespace MyFirstWinFormsApp
                 MessageBox.Show("Only letters allowed");
             }
         }
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private bool IsValidPassword(string password)
         {
-            
+            if (string.IsNullOrEmpty(password))
+                return false;
+
+            // Regex pattern:
+            // At least 8 chars
+            // At least 1 uppercase
+            // At least 1 lowercase
+            // At least 1 digit
+            // At least 1 special character
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$";
+
+            return Regex.IsMatch(password, pattern);
+        }
+    
+    private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+           
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-
+            if (!(textBox3.Text == textBox5.Text))
+            {
+                MessageBox.Show("Password not matching,Please check");
+            }
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
@@ -82,8 +102,21 @@ namespace MyFirstWinFormsApp
                 return false;
             }
         }
-            private void button1_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+            {
+                button1.Enabled = true;
+            }
+
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!IsValidPassword(textBox3.Text))
+            {
+                MessageBox.Show("Invalid Password");
+            }
 
             var email = EmailId.Text?.Trim() ?? string.Empty;
 
@@ -99,9 +132,9 @@ namespace MyFirstWinFormsApp
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
